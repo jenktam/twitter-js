@@ -7,5 +7,8 @@
   },
   "author": "Jen Tam",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
