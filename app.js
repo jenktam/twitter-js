@@ -2,13 +2,20 @@
 
 // REQUIRING MODULES
 const express = require('express');
+const bodyParser = require('body-parser');
 const chalk = require('chalk');
 const router = express.Router();
 const app = express();
-const volleyball = require('volleyball');
+
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
 const routes = require('./routes');
+
+
+// ADDED URL-ENCODED AND JSON BODY-PARSING MIDDLEWARE
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 
 // CONFIGURING APP
 app.set('view engine', 'html'); // have res.render work with html files

@@ -5,7 +5,11 @@ const _ = require('lodash');
 let data = [];
 
 function add (name, content) {
-  data.push({ name: name, content: content });
+  data.push({ name: name, content: content, id: data.length });
+}
+
+function generateRandomId(){
+ return Math.floor(Math.random() * 100);
 }
 
 function list () {
