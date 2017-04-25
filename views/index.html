@@ -15,13 +15,20 @@
 
       <!-- display tweets here -->
       {% for tweet in tweets %}
-        <li id='tweets-list'>
-          <div id='name'>Name</div>
+      <li id='tweets-list'>
+        <div id='name'><a href="/users/{{tweet.name}}">{{tweet.name}}</a></div>
+          <div>Picture
+            <img id='user-image' src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg">
+          </div>
+        <div>{{tweet.content}}</div>
+      </li>
+        <!--<li id='tweets-list'>
+          <div id='name'>{{tweet.name}}</div>
           <div>Picture
             <img id='user-image' src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg">
           </div>
           <div id='tweet'>{{tweet.content}}</div>
-          </li>
+          </li>-->
       {% endfor %}
 
     </div>
